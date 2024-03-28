@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 # Путь к директории с файлами глубины покрытия
-directory = '/data/'
+directory = '/app/data'
 
 # Создаем пустой DataFrame
 combined_data = pd.DataFrame()
@@ -24,4 +24,4 @@ for filename in os.listdir(directory):
         combined_data = pd.concat([combined_data, data])
 
 # Сохраняем объединенные данные в новый файл
-combined_data.to_csv('/data/combined_depth_data.csv', index=False)
+combined_data.to_csv('/app/data/combined_depth_data.csv', index=False)

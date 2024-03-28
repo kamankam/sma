@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Загрузка данных
-data = pd.read_csv("/data/combined_depth_data.csv")
+data = pd.read_csv("/app/data/combined_depth_data.csv")
 
 # Фильтрация данных для генов SMN1 и SMN2
 smn1_data = data[(data['Chromosome'] == 'chr5') & 
@@ -54,5 +54,5 @@ plt.title('Средняя глубина покрытия по интервал�
 plt.xlabel('Позиция')
 plt.ylabel('Средняя глубина покрытия')
 plt.legend()
-plt.savefig('/data/smn1_depth_coverage_plot.png')
+plt.savefig('/app/data/smn1_depth_coverage_plot.png')
 

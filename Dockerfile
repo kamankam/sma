@@ -14,9 +14,9 @@ COPY . .
 RUN pip3 install -r requirements.txt
 
 # Даем права на выполнение скриптам
-RUN chmod +x /app/depth_scripts/depth_analysis.sh
-RUN chmod +x /app/depth_scripts/combine_depth_files.py 
-RUN chmod +x /app/depth_scripts/visualisation.py
+RUN chmod +x ./depth_scripts/depth_analysis.py
+RUN chmod +x ./depth_scripts/combine_depth_files.py 
+RUN chmod +x ./depth_scripts/visualisation.py
 
 #run bash script at start moument
-CMD ["/app/depth_scripts/depth_analysis.sh"]
+CMD ["/depth_scripts/depth_analysis.py"]
